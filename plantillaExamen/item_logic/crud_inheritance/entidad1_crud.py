@@ -13,3 +13,4 @@ database = client.Examen
 class ENTIDAD1CRUD(MONGOCRUD):
     def __init__(self):
         super().__init__('Entidad1')
+        self.collection.create_index("email", unique=True)
