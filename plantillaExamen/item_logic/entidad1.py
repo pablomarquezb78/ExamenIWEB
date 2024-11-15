@@ -13,14 +13,14 @@ async def get_all(filter):
         result = await crud.get_by_filter(filter)
     return result
 
-async def get(id: str):
-    result = await crud.get_id(id)
+async def get(email: str):
+    result = await crud.get_id(email)
     return result
     
-async def delete(id:str):
-    result = await crud.delete_id(id)
+async def delete(email:str):
+    result = await crud.delete_id(email)
     return result
 
-async def update(id: str, data: dict):
-    result = await crud.update_id(id, data)
+async def update(email: str, data: dict):
+    result = await crud.update_id(email, data)
     return result
