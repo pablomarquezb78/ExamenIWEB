@@ -60,7 +60,7 @@ class MONGOCRUD:
         cursor = self.collection.find(filter)
         results = []
         async for document in cursor:
-            document['_id'] = str(document['_id'])  # Convertir ObjectId a string
+            document['_id'] = str(document['_id']) 
             results.append(document)
         
         return results

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routes import entidad1_route, entidad2_route
+from routes import colaborador_route, tarea_route
 
 app = FastAPI()
 
-app.include_router(entidad1_route.router, prefix='/entidad1s')
-app.include_router(entidad2_route.router,prefix='/entidad2s')
+app.include_router(tarea_route.router,prefix='/tareas')
+app.include_router(colaborador_route.router, prefix='/colaboradores')
